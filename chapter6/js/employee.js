@@ -11,10 +11,13 @@ function process(){
             firstName: firstName,
             lastName: lastName,
             department: department,
+            getName: function(){
+                return this.lastName + ', ' + this.firstName;
+            },
             hireDate: new Date()
     };
 
-    let message = '<h2>Employee Added</h2>Name: ' + employee.lastName + ', ' + employee.firstName + '<br>';
+    let message = '<h2>Employee Added</h2>Name: ' + employee.getName() + '<br>';
     message += 'Department: ' + employee.department + '<br>';
     message += 'Hire Date: ' + employee.hireDate.toDateString();
 
